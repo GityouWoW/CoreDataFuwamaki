@@ -36,12 +36,21 @@ class ViewController: UIViewController {
         let jobItems: [Job] = CoreDataRepository.array()
         for jobItem in jobItems {
             CoreDataRepository.delete(jobItem)
+            CoreDataRepository.save()
+        }
+        if jobItems.isEmpty {
+            outputLabel.text = "Enpty"
         }
     }
     
     @IBAction func fetchTaped(_ sender: Any) {
         // Fetch
         let jobItems: [Job] = CoreDataRepository.array()
+        if jobItems.isEmpty {
+            outputLabel.text = "Enpty"
+            return
+        }
+        
         guard let firstJob = jobItems.first else { return }
         outputLabel.text = firstJob.title! + firstJob.jobId!.uuidString
         debugPrint(firstJob)

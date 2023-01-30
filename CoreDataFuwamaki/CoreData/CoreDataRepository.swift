@@ -13,7 +13,7 @@ class CoreDataRepository {
     init() {}
 
     private static var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "SampleProject")
+        let container = NSPersistentContainer(name: "CoreDataFuwamaki")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
