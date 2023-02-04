@@ -13,7 +13,6 @@ import CoreData
 public class Person: NSManagedObject {
     static func new(name: String, age: Int16) -> Person {
         let entity: Person = CoreDataRepository.entity()
-        entity.personId = UUID()
         entity.name = name
         entity.age = age
 //        entity.jobId = jobId
@@ -22,7 +21,7 @@ public class Person: NSManagedObject {
 
     func update(name: String, age: Int16) {
         self.name = name
-        self.age = age
+        self.age += age
     }
 
 }

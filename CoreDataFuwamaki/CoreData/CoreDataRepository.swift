@@ -71,3 +71,40 @@ extension CoreDataRepository {
         context.rollback()
     }
 }
+
+extension CoreDataRepository {
+    static func isEnpty<T: NSManagedObject>(ob: T) -> Bool {
+        do {
+            let request = NSFetchRequest<T>(entityName: String(describing: T.self))
+            let result = try context.fetch(request)
+            if result.isEmpty {
+                return true
+            } else {
+                return false
+            }
+        } catch {
+            fatalError()
+        }
+    }
+}
+
+extension CoreDataRepository {
+    
+        static var checkLightWeightMigration: NSMappingModel {
+            let subdirectory = "CoreDataFuwamaki.momd"
+            guard let sourceModelURL = Bundle.main.url(forResource: "CoreDataFuwamaki", withExtension: "mom", subdirectory: subdirectory) else { print("Error 01"); fatalError() }
+            guard let destinationModelURL = Bundle.main.url(forResource: "CoreDataFuwamaki 2", withExtension: "mom", subdirectory: subdirectory) else { print("Error 01"); fatalError() }
+
+            let sourceModel = NSManagedObjectModel(contentsOf: sourceModelURL)!
+            let destinationModel = NSManagedObjectModel(contentsOf: destinationModelURL)!
+            
+            do {
+                return try NSMappingModel.inferredMappingModel(forSourceModel: sourceModel, destinationModel: destinationModel)
+            } catch {
+                fatalError("migrationCheck error \(error)")
+            }
+        }
+//    static func c() {
+//        print(checkLightWeightMigration)
+//    }
+}

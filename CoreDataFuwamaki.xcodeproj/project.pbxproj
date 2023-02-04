@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A11226C298CF81800BFFF04 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11226B298CF81800BFFF04 /* Person+CoreDataProperties.swift */; };
+		9A11226E298E24BA00BFFF04 /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A11226D298E24BA00BFFF04 /* CoreDataRepository.swift */; };
 		9AF0587E2987DADB00BDED3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0587D2987DADB00BDED3B /* AppDelegate.swift */; };
 		9AF058802987DADB00BDED3B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0587F2987DADB00BDED3B /* SceneDelegate.swift */; };
 		9AF058822987DADB00BDED3B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF058812987DADB00BDED3B /* ViewController.swift */; };
@@ -14,14 +16,14 @@
 		9AF058882987DADB00BDED3B /* CoreDataFuwamaki.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AF058862987DADB00BDED3B /* CoreDataFuwamaki.xcdatamodeld */; };
 		9AF0588A2987DADE00BDED3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AF058892987DADE00BDED3B /* Assets.xcassets */; };
 		9AF0588D2987DADE00BDED3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AF0588B2987DADE00BDED3B /* LaunchScreen.storyboard */; };
-		9AF058952987DAFA00BDED3B /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF058942987DAFA00BDED3B /* CoreDataRepository.swift */; };
 		9AF0589F2987DC5F00BDED3B /* Job+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0589B2987DC5F00BDED3B /* Job+CoreDataClass.swift */; };
 		9AF058A02987DC5F00BDED3B /* Job+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0589C2987DC5F00BDED3B /* Job+CoreDataProperties.swift */; };
 		9AF058A12987DC5F00BDED3B /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF0589D2987DC5F00BDED3B /* Person+CoreDataClass.swift */; };
-		9AF058A62987E5C800BDED3B /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF058A42987E5C800BDED3B /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A11226B298CF81800BFFF04 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9A11226D298E24BA00BFFF04 /* CoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		9AF0587A2987DADB00BDED3B /* CoreDataFuwamaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataFuwamaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AF0587D2987DADB00BDED3B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AF0587F2987DADB00BDED3B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,12 +33,9 @@
 		9AF058892987DADE00BDED3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AF0588C2987DADE00BDED3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AF0588E2987DADE00BDED3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AF058942987DAFA00BDED3B /* CoreDataRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataRepository.swift; path = "../../Swift:CoreDataを使ってみる（入門UIKit）/Swift:CoreDataを使ってみる（入門UIKit）/CoreDataRepository.swift"; sourceTree = "<group>"; };
-		9AF0589A2987DC1700BDED3B /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
 		9AF0589B2987DC5F00BDED3B /* Job+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Job+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9AF0589C2987DC5F00BDED3B /* Job+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Job+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9AF0589D2987DC5F00BDED3B /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9AF058A42987E5C800BDED3B /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				9AF058992987DC0A00BDED3B /* CoreData */,
-				9AF058942987DAFA00BDED3B /* CoreDataRepository.swift */,
 				9AF0587D2987DADB00BDED3B /* AppDelegate.swift */,
 				9AF0587F2987DADB00BDED3B /* SceneDelegate.swift */,
 				9AF058812987DADB00BDED3B /* ViewController.swift */,
@@ -85,12 +83,12 @@
 		9AF058992987DC0A00BDED3B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9A11226D298E24BA00BFFF04 /* CoreDataRepository.swift */,
 				9AF0589B2987DC5F00BDED3B /* Job+CoreDataClass.swift */,
 				9AF0589C2987DC5F00BDED3B /* Job+CoreDataProperties.swift */,
 				9AF0589D2987DC5F00BDED3B /* Person+CoreDataClass.swift */,
-				9AF058A42987E5C800BDED3B /* Person+CoreDataProperties.swift */,
+				9A11226B298CF81800BFFF04 /* Person+CoreDataProperties.swift */,
 				9AF058862987DADB00BDED3B /* CoreDataFuwamaki.xcdatamodeld */,
-				9AF0589A2987DC1700BDED3B /* CoreDataRepository.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -167,14 +165,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AF058A12987DC5F00BDED3B /* Person+CoreDataClass.swift in Sources */,
+				9A11226E298E24BA00BFFF04 /* CoreDataRepository.swift in Sources */,
 				9AF058A02987DC5F00BDED3B /* Job+CoreDataProperties.swift in Sources */,
-				9AF058952987DAFA00BDED3B /* CoreDataRepository.swift in Sources */,
+				9A11226C298CF81800BFFF04 /* Person+CoreDataProperties.swift in Sources */,
 				9AF058822987DADB00BDED3B /* ViewController.swift in Sources */,
 				9AF058882987DADB00BDED3B /* CoreDataFuwamaki.xcdatamodeld in Sources */,
 				9AF0589F2987DC5F00BDED3B /* Job+CoreDataClass.swift in Sources */,
 				9AF0587E2987DADB00BDED3B /* AppDelegate.swift in Sources */,
 				9AF058802987DADB00BDED3B /* SceneDelegate.swift in Sources */,
-				9AF058A62987E5C800BDED3B /* Person+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

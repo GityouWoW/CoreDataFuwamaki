@@ -11,13 +11,21 @@ import CoreData
 
 
 extension Job {
+    override public func awakeFromInsert() {
+        super.awakeFromInsert()
+        jobId = UUID()
+    }
+    
+    public override func didSave() {
+        debugPrint(self)
+    }
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Job> {
         return NSFetchRequest<Job>(entityName: "Job")
     }
 
-    @NSManaged public var title: String?
-    @NSManaged public var jobId: UUID?
+    @NSManaged public var jobId: UUID
+    @NSManaged public var title: String
 
 }
 

@@ -19,6 +19,7 @@ class ViewController: UIViewController {
 
     // Save
     @IBAction func saveTaped(_ sender: Any) {
+        // Job
         let jobItems: [Job] = CoreDataRepository.array()
         if jobItems.isEmpty {
             // 追加
@@ -27,6 +28,18 @@ class ViewController: UIViewController {
             // 更新
             if let firstItem = jobItems.first {
                 firstItem.update(title: "Update")
+                CoreDataRepository.save()
+            }
+        }
+        // Person
+        let personItems: [Person] = CoreDataRepository.array()
+        if personItems.isEmpty {
+            // 追加
+            CoreDataRepository.add(Person.new(name: "New", age: 16))
+        } else {
+            // 更新
+            if let firstItem = personItems.first {
+                firstItem.update(name: "Update", age: 18)
                 CoreDataRepository.save()
             }
         }
@@ -41,10 +54,14 @@ class ViewController: UIViewController {
     
     @IBAction func fetchTaped(_ sender: Any) {
         // Fetch
+        // Job
         let jobItems: [Job] = CoreDataRepository.array()
         guard let firstJob = jobItems.first else { return }
-        outputLabel.text = firstJob.title! + firstJob.jobId!.uuidString
-        debugPrint(firstJob)
+        outputLabel.text = firstJob.title + firstJob.jobId.uuidString
+        // Person
+        let personItems: [Person] = CoreDataRepository.array()
+        guard let firstPerson = personItems.first else { return }
+        outputLabel.text = firstPerson.name + String(firstPerson.age)
     }
 }
 

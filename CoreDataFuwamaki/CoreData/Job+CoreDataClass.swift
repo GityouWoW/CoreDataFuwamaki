@@ -11,9 +11,9 @@ import CoreData
 
 @objc(Job)
 public class Job: NSManagedObject {
+    
     static func new(title: String) -> Job {
         let entity: Job = CoreDataRepository.entity()
-        entity.jobId = UUID()
         entity.title = title
         return entity
     }
