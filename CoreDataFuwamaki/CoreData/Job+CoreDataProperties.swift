@@ -18,7 +18,7 @@ extension Job {
 
     @NSManaged public var title: String
     @NSManaged public var jobId: UUID?
-//    @NSManaged public var subTitle: String? // V2
+    @NSManaged public var subTitle: String? // V2
 }
 
 extension Job : Identifiable {

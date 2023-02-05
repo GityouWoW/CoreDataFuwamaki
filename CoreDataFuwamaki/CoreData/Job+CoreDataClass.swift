@@ -21,7 +21,7 @@ public class Job: NSManagedObject {
 
     func update(title: String, subTitle: String) {
         self.title = title
-//        self.subTitle = subTitle // V2
+        self.subTitle = subTitle // V2
     }
     
     override public func didSave() {

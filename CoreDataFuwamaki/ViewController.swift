@@ -51,11 +51,11 @@ class ViewController: UIViewController {
         }
         
         func item() {
-//            let items: [Item] = CoreDataRepository.array()
-//            CoreDataRepository.add(Item.new(title: "New Item V2" + "\n" + Date().description))
-//            if let firstItem = items.first {
-//                firstItem.update(title: "Update Item V2" + "\n" + Date().description)
-//            }
+            let items: [Item] = CoreDataRepository.array()
+            CoreDataRepository.add(Item.new(title: "New Item V2" + "\n" + Date().description))
+            if let firstItem = items.first {
+                firstItem.update(title: "Update Item V2" + "\n" + Date().description)
+            }
         }
     }
 
@@ -87,13 +87,13 @@ class ViewController: UIViewController {
         }
         
         func item() {
-//            let items: [Item] = CoreDataRepository.array()
-//            for item in items {
-//                CoreDataRepository.delete(item)
-//            }
-//            if items.isEmpty {
-//                outputLabel.text = "Enpty"
-//            }
+            let items: [Item] = CoreDataRepository.array()
+            for item in items {
+                CoreDataRepository.delete(item)
+            }
+            if items.isEmpty {
+                outputLabel.text = "Enpty"
+            }
         }
     }
     
@@ -102,7 +102,7 @@ class ViewController: UIViewController {
         var s = ""
         s = person()
         s += job()
-        item() // V2
+        s += item() // V2
         
         outputLabel.text = s
         
@@ -114,7 +114,6 @@ class ViewController: UIViewController {
             } else {
                 guard let firstPerson = personItems.first else { return "Person is Empty" }
                 debugPrint(firstPerson)
-                firstPerson
                 return "Name" + (firstPerson.name ?? "name") + "Age" + String(firstPerson.age)
             }
         }
@@ -131,16 +130,17 @@ class ViewController: UIViewController {
         }
         
         /// Item
-        func item() {
-//            let items: [Item] = CoreDataRepository.array()
-//            if items.isEmpty {
-//                outputLabel.text = outputLabel.text ?? "" + "\n" + "Item is Enpty"
-//                return
-//            } else {
-//                guard let firstItem = items.first else { return }
-//                outputLabel.text = outputLabel.text ?? "" + firstItem.title!
-//                debugPrint(firstItem)
-//            }
+        func item() -> String {
+            let items: [Item] = CoreDataRepository.array()
+            if items.isEmpty {
+                outputLabel.text = outputLabel.text ?? "" + "\n" + "Item is Enpty"
+                return "Item is Enpty"
+            } else {
+                guard let firstItem = items.first else { return "Item is Enpty"}
+                outputLabel.text = outputLabel.text ?? "" + firstItem.title!
+                debugPrint(firstItem)
+                return firstItem.title ?? "xxx"
+            }
         }
     }
 }

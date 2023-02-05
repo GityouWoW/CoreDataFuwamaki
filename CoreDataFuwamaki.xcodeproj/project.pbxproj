@@ -409,7 +409,7 @@
 				4B0DF43329882B60000B676B /* CoreDataFuwamaki 2.xcdatamodel */,
 				9AF058872987DADB00BDED3B /* CoreDataFuwamaki.xcdatamodel */,
 			);
-			currentVersion = 9AF058872987DADB00BDED3B /* CoreDataFuwamaki.xcdatamodel */;
+			currentVersion = 4B0DF43329882B60000B676B /* CoreDataFuwamaki 2.xcdatamodel */;
 			path = CoreDataFuwamaki.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
