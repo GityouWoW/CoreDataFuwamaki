@@ -16,9 +16,9 @@ extension Job {
         return NSFetchRequest<Job>(entityName: "Job")
     }
 
-    @NSManaged public var title: String?
+    @NSManaged public var title: String
     @NSManaged public var jobId: UUID?
-
+//    @NSManaged public var subTitle: String? // V2
 }
 
 extension Job : Identifiable {
